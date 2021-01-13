@@ -1,3 +1,4 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const api = require("./routes/api/api.js");
@@ -18,7 +19,7 @@ app.use("/assets", express.static(`${__dirname}/public`));
 app.set('view engine', 'ejs');
 
 //database connections
-getConnection();
+//
 app.use("/api", api);
 app.use("/api/books/", books);
 app.use("/", homeHtml);
